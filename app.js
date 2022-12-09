@@ -1,11 +1,16 @@
 //PRIMER EVENTO EN EL CICLO DE SITIO WEB-> ONLOAD. APP/CODE COMIENZA A CORRER:
 
-window.onload = function () {
+window.onload = () => {
     console.log('verificando funcionamiento...');
 
+    //GENERAR CARTA AL AZAR
+  
+    document.querySelector('.number').innerHTML = (RandomCardNumber());
+    document.querySelector('.b-suit').innerHTML = (RandomCardSuit());
+       
+
+
 }
-
-
 
 
 //FUNCIONES PARA MOSTRAR CARTA AL AZAR (N° y PALO):
@@ -19,14 +24,18 @@ let RandomCardNumber = () => {
 
     return numbers[numberposition];
 
-}
+};
 
 let RandomCardSuit = () => {
 
-    let suits = ["♣", "♠", "♦ ", "♥"];
+    let suits = ["♣", "♠", "♦", "♥"];
 
     let suitsposition = Math.floor(Math.random() * suits.length);
 
     return suits[suitsposition];
 
-}
+
+};
+
+
+
