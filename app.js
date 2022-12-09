@@ -3,7 +3,7 @@
 window.onload = () => {
     console.log('verificando funcionamiento...');
 
-    //GENERAR CARTA AL AZAR
+    //FUNCIONES PARA MOSTRAR CARTA AL AZAR (N° y PALO):
   
     document.querySelector('.number').innerHTML = (RandomCardNumber());
 
@@ -13,12 +13,21 @@ window.onload = () => {
         document.querySelector('.b-suit').innerHTML = RandomCardSuits;
     
     
-   
+    if (document.querySelector('.t-suit').innerHTML === "♥" || document.querySelector('.t-suit').innerHTML === "♦" ){ //para aplicar color rojo en caso de carta palo corazón o diamante.
+        document.querySelector('.t-suit').style.color = "red";
+        document.querySelector('.b-suit').style.color = "red";
+    }
+      
 
 }
 
 
-//FUNCIONES PARA MOSTRAR CARTA AL AZAR (N° y PALO):
+
+
+
+
+
+
 
 
 let RandomCardNumber = () => {
