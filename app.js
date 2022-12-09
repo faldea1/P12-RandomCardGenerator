@@ -6,9 +6,14 @@ window.onload = () => {
     //GENERAR CARTA AL AZAR
   
     document.querySelector('.number').innerHTML = (RandomCardNumber());
-    document.querySelector('.b-suit').innerHTML = (RandomCardSuit());
-       
 
+    let RandomCardSuits = RandomCardSuit() //para aplicar simultaneamente el mismo resultado aleatorio.
+
+        document.querySelector('.t-suit').innerHTML = RandomCardSuits;
+        document.querySelector('.b-suit').innerHTML = RandomCardSuits;
+    
+    
+   
 
 }
 
@@ -33,6 +38,8 @@ let RandomCardSuit = () => {
     let suitsposition = Math.floor(Math.random() * suits.length);
 
     return suits[suitsposition];
+   
+
 
 
 };
